@@ -1,0 +1,81 @@
+#what .items{
+    display: block;
+    padding: 1rem;
+}
+/* Align Icon to Left */
+#what .items .item{
+    /* flex items can itself be flex container */
+    display: flex;
+
+    text-align: left;
+}
+
+/* Position the Icon */
+#what .items .item i{
+    margin-right: 1.3rem;
+    /*  align the font awesom symbol to center */
+    align-self: center;
+
+    margin-bottom: 0;
+}
+
+/* SmartPhones */
+@media(max-width: 500px){
+    #navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar .logo{
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    #navbar ul{
+        padding: 0.5rem;
+    }
+
+    #showcase .showcase-content{
+        top: 110px;
+        /* margin-top: -2rem; */
+    }
+
+    #who{
+        display: block;
+    }
+
+    #who .who-img{
+        display: none;
+    }
+
+    #clients .items img{
+        width: 80%;
+    }
+
+    /* target the last element */
+    #clients .items div:last-child{
+        display: none;
+    }
+
+    #contact{
+        /* the maps becomes invisible as there is no height */
+        /* giving flex-direction is not helping in firefox */
+        /* flex-direction: column; */
+        display: block;
+    }
+
+    #map{
+        height: 200px;
+        /* width: 500px; */
+        border-top: 4px solid black;
+    }
+}
+
+@media(max-height: 568px){
+    .l-heading{
+        font-size: 3rem;
+    }
+    .lead{
+        font-size: 1rem;
+    }
+}
